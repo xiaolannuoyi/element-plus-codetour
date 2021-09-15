@@ -1,0 +1,112 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "layput",
+  "steps": [
+    {
+      "file": "element-plus/packages/components/row/src/row.ts",
+      "description": "# provide\n```provide('ElRow',props.gutter)```\n\n为什么不这样用，要用`computed`?\n\n`provide/inject` 绑定*并不是*响应式的。我们可以通过传递一个 `ref` property 或 `reactive` 对象给 `provide` 来改变这种行为。\n\n[#1441](https://github.com/element-plus/element-plus/issues/1441)",
+      "line": 27,
+      "selection": {
+        "start": {
+          "line": 24,
+          "character": 5
+        },
+        "end": {
+          "line": 27,
+          "character": 7
+        }
+      }
+    },
+    {
+      "file": "element-plus/packages/components/row/src/row.ts",
+      "description": "# margin\nrow的左右margin，用于抵消col的padding，这里通过gutter计算出实际margin",
+      "line": 28,
+      "selection": {
+        "start": {
+          "line": 29,
+          "character": 5
+        },
+        "end": {
+          "line": 39,
+          "character": 7
+        }
+      }
+    },
+    {
+      "file": "element-plus/packages/components/col/src/col.ts",
+      "description": "# padding \n通过gutter 计算col左右的padding",
+      "line": 63,
+      "selection": {
+        "start": {
+          "line": 55,
+          "character": 5
+        },
+        "end": {
+          "line": 63,
+          "character": 7
+        }
+      }
+    },
+    {
+      "file": "element-plus/packages/components/col/src/col.ts",
+      "description": "# 处理布局相关\n`${props[prop]}` 应替换成 `size`\n\nel-col-0 是一个特殊的值。\n\nspan : el-col-num\n\n非span: el-col-(offset|pull|push)-num\n",
+      "line": 73,
+      "selection": {
+        "start": {
+          "line": 66,
+          "character": 7
+        },
+        "end": {
+          "line": 73,
+          "character": 9
+        }
+      }
+    },
+    {
+      "file": "element-plus/packages/components/col/src/col.ts",
+      "description": "# 处理屏幕响应相关\n\nspan: el-col-(size)-num\n\n非span: el-col-(size)-(offset|pull|push)-num",
+      "line": 88,
+      "selection": {
+        "start": {
+          "line": 74,
+          "character": 7
+        },
+        "end": {
+          "line": 88,
+          "character": 9
+        }
+      }
+    },
+    {
+      "file": "element-plus/packages/components/col/src/col.ts",
+      "description": "# is-guttered\n```\n.is-guttered{\n   display: block;\n   min-height: 1px;\n}\n```\n此代码，只是设定最小高度。感觉影响不是很大。",
+      "line": 92,
+      "selection": {
+        "start": {
+          "line": 90,
+          "character": 6
+        },
+        "end": {
+          "line": 92,
+          "character": 8
+        }
+      }
+    },
+    {
+      "file": "element-plus/packages/components/col/src/col.ts",
+      "description": "# h 函数\n这里使用`h函数`是因为`tag`不确定\n\nslots.default?.() \n",
+      "line": 105,
+      "selection": {
+        "start": {
+          "line": 98,
+          "character": 7
+        },
+        "end": {
+          "line": 105,
+          "character": 8
+        }
+      }
+    }
+  ],
+  "ref": "main"
+}
