@@ -20,7 +20,7 @@
     {
       "file": "element-plus/packages/components/row/src/row.ts",
       "description": "# margin\nrow的左右margin，用于抵消col的padding，这里通过gutter计算出实际margin",
-      "line": 28,
+      "line": 39,
       "selection": {
         "start": {
           "line": 29,
@@ -94,7 +94,7 @@
     },
     {
       "file": "element-plus/packages/components/col/src/col.ts",
-      "description": "# h 函数\n这里使用`h函数`是因为`tag`不确定\n\nslots.default?.() \n",
+      "description": "# h 函数\n这里使用`h函数`是因为`tag`不确定\n\n✅slots.default?.() \n",
       "line": 105,
       "selection": {
         "start": {
@@ -104,6 +104,36 @@
         "end": {
           "line": 105,
           "character": 8
+        }
+      }
+    },
+    {
+      "file": "element-plus/packages/theme-chalk/src/col.scss",
+      "description": "# is-guttered\n不同数字时的`is-guttered`",
+      "line": 22,
+      "selection": {
+        "start": {
+          "line": 7,
+          "character": 1
+        },
+        "end": {
+          "line": 22,
+          "character": 2
+        }
+      }
+    },
+    {
+      "file": "element-plus/packages/theme-chalk/src/col.scss",
+      "description": "# 响应式布局大小 \nel-col-num flex: 1 1 xx%\n\nel-col-(offset|pull|push)-num\n\nflex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto\n\n该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)。\n\nflex-grow:放大比例（0表示有剩余空间，不放大）\n\nflex-shrink:缩小比例（1表示空间不足时缩小，0表示不缩小）\n\nflex-basis:占据的空间（auto本来项目的大小）\n",
+      "line": 43,
+      "selection": {
+        "start": {
+          "line": 24,
+          "character": 1
+        },
+        "end": {
+          "line": 43,
+          "character": 2
         }
       }
     }
