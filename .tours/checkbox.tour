@@ -1,0 +1,116 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "checkbox",
+  "steps": [
+    {
+      "file": "element-plus/packages/components/checkbox/src/checkbox.vue",
+      "description": "# 结构\n\nlabel放在最外层的作用是扩大鼠标点击范围，无论是点击在文字还是input上都能够触发响\n```html\n<label class=\"el-checkbox\">\n    <!-- 复选框 -->\n    <span class=\"el-checkbox__input\"></span>\n    <!-- 文字部分 -->\n    <span class=\"el-checkbox__label\"></span>\n</label>\n```",
+      "line": 1
+    },
+    {
+      "file": "element-plus/packages/theme-chalk/src/checkbox.scss",
+      "description": "# 样式\n未选中时的样式 🔲",
+      "line": 222,
+      "selection": {
+        "start": {
+          "line": 212,
+          "character": 5
+        },
+        "end": {
+          "line": 222,
+          "character": 68
+        }
+      }
+    },
+    {
+      "file": "element-plus/packages/theme-chalk/src/checkbox.scss",
+      "description": "# 样式\n选中时样式 ✅",
+      "line": 242,
+      "selection": {
+        "start": {
+          "line": 228,
+          "character": 5
+        },
+        "end": {
+          "line": 242,
+          "character": 6
+        }
+      }
+    },
+    {
+      "file": "element-plus/packages/theme-chalk/src/checkbox.scss",
+      "description": "# 样式\n选中时的样式 展示出来 `scaleY(1)`\n\n并设置背景色突出对勾。",
+      "line": 175,
+      "selection": {
+        "start": {
+          "line": 173,
+          "character": 9
+        },
+        "end": {
+          "line": 175,
+          "character": 10
+        }
+      }
+    },
+    {
+      "file": "element-plus/packages/theme-chalk/src/checkbox.scss",
+      "description": "# el-checkbox__original\n同radio",
+      "line": 253,
+      "selection": {
+        "start": {
+          "line": 245,
+          "character": 3
+        },
+        "end": {
+          "line": 253,
+          "character": 4
+        }
+      }
+    },
+    {
+      "file": "element-plus/packages/components/checkbox/src/checkbox.vue",
+      "description": "# 文字部分\n个人觉得radio的后备插槽写法更好\n```html\n<span class=\"el-checkbox__label\">\n <slot>\n     {{ label }}\n </slot>\n</span>\n```",
+      "line": 57,
+      "selection": {
+        "start": {
+          "line": 54,
+          "character": 5
+        },
+        "end": {
+          "line": 57,
+          "character": 12
+        }
+      }
+    },
+    {
+      "file": "element-plus/packages/components/checkbox/src/checkbox.vue",
+      "description": "# focus\n这里跟 radio 不一样，这里是有`is-focus`添加 focus 样式。",
+      "line": 19,
+      "selection": {
+        "start": {
+          "line": 19,
+          "character": 9
+        },
+        "end": {
+          "line": 19,
+          "character": 27
+        }
+      }
+    },
+    {
+      "file": "element-plus/packages/theme-chalk/src/checkbox.scss",
+      "description": "# focus 样式\n",
+      "line": 187,
+      "selection": {
+        "start": {
+          "line": 182,
+          "character": 5
+        },
+        "end": {
+          "line": 187,
+          "character": 6
+        }
+      }
+    }
+  ]
+}
