@@ -1,0 +1,91 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "form",
+  "steps": [
+    {
+      "file": "element-plus/packages/components/form/src/form.vue",
+      "description": "# form 🏷️\n\n使用slot接收内容 设置label位置样式",
+      "line": 10
+    },
+    {
+      "file": "element-plus/packages/components/form/src/form.vue",
+      "description": "# labelWidth\n\n在`labelWrap`中使用\n",
+      "line": 34,
+      "selection": {
+        "start": {
+          "line": 67,
+          "character": 5
+        },
+        "end": {
+          "line": 67,
+          "character": 23
+        }
+      }
+    },
+    {
+      "file": "element-plus/packages/components/form/src/form.vue",
+      "description": "# resetFields\n\n循环调用elFormItem中的`resetField`方法",
+      "line": 137,
+      "selection": {
+        "start": {
+          "line": 138,
+          "character": 11
+        },
+        "end": {
+          "line": 138,
+          "character": 22
+        }
+      }
+    },
+    {
+      "file": "element-plus/packages/components/form/src/form.vue",
+      "description": "# clearValidate\n移除校验，可能是一个、多个、全部\n\n循环调用elFormItem中的`clearValidate`方法\n\n",
+      "line": 147,
+      "selection": {
+        "start": {
+          "line": 148,
+          "character": 11
+        },
+        "end": {
+          "line": 148,
+          "character": 24
+        }
+      }
+    },
+    {
+      "file": "element-plus/packages/components/form/src/form.vue",
+      "description": "# validate 校验\n\n1. 如果没有callback函数，返回promise，\n使用方法如下\n```js\nconst valid = await this.$refs.form.validate().catch((err)=>{return err})})\nif (valid) {\n  //验证通过的代码的\n} else {\n  //验证不通过的代码\n}\n```\n2. 有`callback`,执行`callback`,返回undefined\n3. Promise 封装callback\n",
+      "line": 158
+    },
+    {
+      "file": "element-plus/packages/components/form/src/form.vue",
+      "description": "# validateField 部分校验\n\n部分校验使用时，没有用`Promise`封装。\n\n若想使用，需自己封装函数\n```js\n// 将 element-ui 的 validateField 多个参数校验时，返回 校验成功true｜失败false\n// 使用方法：\n// const vaild = await pifyValidateField(this.$refs[formName].validateField, ['name', 'region']);\nexport const pifyValidateField = async (validateFieldFn, args) => {\n    const promiseList = [];\n    args.forEach(item => {\n        validateFieldFn(item, errMsg => {\n            errMsg && promiseList.push(Promise.resolve(errMsg));\n        });\n    });\n    const errMsgArr = await Promise.all(promiseList);\n    return !errMsgArr.length;\n};\n```\n",
+      "line": 203
+    },
+    {
+      "file": "element-plus/packages/components/form/src/form.vue",
+      "description": "# scrollToField 滚动到指定表单字段\n\n`Element.scrollIntoView`\n",
+      "line": 219
+    },
+    {
+      "file": "element-plus/packages/components/form/src/form-item.vue",
+      "description": "# labelWarp\n这个组件的主要目的是计算`labelWidth`",
+      "line": 2,
+      "selection": {
+        "start": {
+          "line": 3,
+          "character": 6
+        },
+        "end": {
+          "line": 3,
+          "character": 15
+        }
+      }
+    },
+    {
+      "file": "element-plus/packages/components/form/src/form-item.vue",
+      "description": "# el-from-item value\n支持使用`:`取key\n`prop='a:name' ` 相当于 `prop='a.name'`\n但是目前不支持特殊key，待官方支持特殊key（lodash.get）",
+      "line": 170
+    }
+  ]
+}
